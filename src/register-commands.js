@@ -3,8 +3,8 @@ const { REST, Routes, ApplicationCommandOptionType} = require('discord.js');
 
 const commands = [
     {
-        name: 'hey',
-        description: 'will type out hey',
+        name: 'help',
+        description: 'will print out a help message',
 
     },
 
@@ -19,6 +19,32 @@ const commands = [
             type: 4, // 4 represents INTEGER
             required: true,
         }]   
+    },
+
+    {
+        name: 'ban',
+        description: 'will ban a certain user',
+        options: [
+            {
+                name: 'user',
+                description: 'Enter the name of user you wish to ban.',
+                type: ApplicationCommandOptionType.User,
+                required: true,
+            },
+
+            {
+                name: 'reason',
+                description: 'Enter why you are banning the selected user.',
+                type: ApplicationCommandOptionType.String,
+                required: true,
+            }
+        ]
+    },
+    
+    {
+        name: 'date',
+        description: 'will output the current date',
+
     }
 ];
 

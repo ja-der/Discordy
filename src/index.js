@@ -26,8 +26,9 @@ client.on('messageCreate', (message) => {
 client.on('interactionCreate', async (interaction) => {
     if (!interaction.isChatInputCommand()) return;
 
-    if (interaction.commandName === 'hey') {
-        interaction.reply('Hey!');
+    if (interaction.commandName === 'help') {
+        interaction.reply('Hey! Welcome to the server. The UI is easy fo figure out and looks exactly like any regular texting app. Use the bar at the bottom of ' +
+        'to chat');
     }
 
     if (!interaction.isCommand()) return;
@@ -54,6 +55,34 @@ client.on('interactionCreate', async (interaction) => {
     
         interaction.reply(`Deleted ${amount} messages.`);
     
+    }
+
+    if (commandName == 'ban') {
+        const member = interaction.guild.members.cache.get(user.id);
+        const reason = options.getString('Reason') || 'No reason provided';
+        
+        if (!member) {
+            return interaction.reply({
+                content: 'Please enter a valid suer to ban.',
+                ephemeral: true,
+            })
+        }
+
+        // ban the user
+        member.ban({ reason })
+            .then(() => {
+                interaction.reply('Banned ' + user.tag + ' from the server.');
+
+            })
+            .catch((error) => {
+                console.error('Error banning user: ' + error);
+                interaction.reply('An error occured while banning the user.');
+            });
+    }
+
+    if (commandName == 'date') {
+        const currentDate = new Date();
+        interaction.reply('the current date is ' + currentDate);
     }
 
         
