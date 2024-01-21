@@ -34,6 +34,26 @@ module.exports = {
         if (msDuration < 5000 || msDuration > 2.419e9) {
             await interaction.editReply('Timeout duration cannot be less than 5 seconds or more than 28 days.')
         }
+
+        const targetUserRolePosition = targetUser.roles.highest.position;
+        const requestUserRolePosition = interaction.member.roles.highest.position;
+        const botRolePosition = interaction.guild.members.me.roles.highest.position;
+
+        if (targetUserRolePosition >= requestUserRolePosition) {
+            await interaction.editReply(
+                "You can't timeoutthat user because they have the same/higher role than you."
+            );
+            return;
+        }
+
+        if (targetUserRolePosition >= botRolePosition) {
+            await interaction.editReply(
+                "I can't timeoutthat user because they have the same/higher role than me."
+            );
+            return;
+        }
+
+
     },
     name: 'timeout',
     description: 'Timeout a user.',
