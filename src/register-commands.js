@@ -43,8 +43,7 @@ const commands = [
     
     {
         name: 'date',
-        description: 'will output the current date',
-
+        description: 'gives current date and time in UTC\nUseful when talking to friends around the world',
     }
 ];
 

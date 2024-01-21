@@ -27,8 +27,7 @@ client.on('interactionCreate', async (interaction) => {
     if (!interaction.isChatInputCommand()) return;
 
     if (interaction.commandName === 'help') {
-        interaction.reply('Hey! Welcome to the server. The UI is easy fo figure out and looks exactly like any regular texting app. Use the bar at the bottom of ' +
-        'to chat');
+        interaction.reply('Hey! Welcome to the server. Feel free to browse around.');
     }
 
     if (!interaction.isCommand()) return;
@@ -44,8 +43,6 @@ client.on('interactionCreate', async (interaction) => {
             ephemeral: true, // This makes the reply visible only to the user who issued the command
         });
         }
-        
-        
         const messages = await interaction.channel.messages.fetch({ limit: amount });
         messages.forEach((message) => {
           message.delete().catch((error) => {
@@ -81,12 +78,43 @@ client.on('interactionCreate', async (interaction) => {
     }
 
     if (commandName == 'date') {
-        const currentDate = new Date();
+        const currentDate = new Date().toUTCString();
         interaction.reply('the current date is ' + currentDate);
     }
 
-        
-      
+    if (commandName == 'news') {
+    }
 });
+
+client.on('interactionCreate', async (interaction) => {
+    try {
+        if (!interaction.isButton()) return;
+
+        await interaction.deferReply({ ephemeral: true });
+    
+        const role = interaction.guild.roles.cache.get(interaction.customId);
+        if (!role) {
+            interaction.editReply({
+                content: "I couldn't find that role",
+            })
+            return;
+        }
+    
+        const hasRole = interaction.member.roles.cache.has(role.id);
+    
+        if (hasRole) {
+            await interaction.member.roles.remove(role);
+            await interaction.editReply(`The role ${role} has been added.`);
+            return;
+        }
+    
+        await interaction.member.roles.add(role);
+        await interaction.editReply(`The role ${role} has been removed.`);
+    
+    } catch (error) {
+        console.log(error);
+    }
+})
+
 
 client.login(process.env.TOKEN);
