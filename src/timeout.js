@@ -53,6 +53,21 @@ module.exports = {
             return;
         }
 
+        try {
+            const { default: prettyMs } = await import ('pretty-ms');
+
+            if (targetUser.isCommunicationDisabled()) {
+                await targetUser.timeout(msDuration,reason);
+                await interaction.editReply(`${targetUser}'s timeout has been updated to ${prettyMs(msDuration, {verbose: true })}`)
+                return;
+            }
+
+            await targetUser.timeout(msDuration,reason);
+            await interaction.editReply(`${targetUser} was timed out for ${prettyMs(msDuration, {verbose: true })}.\nReason: ${reason}`)
+        } catch (error) {
+            console.log(`There was an error when timing out: ${error}`);
+        }
+
 
     },
     name: 'timeout',
