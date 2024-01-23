@@ -1,11 +1,11 @@
-# Discordy 🤖
+# Diskycordy 🤖
 
-Welcome to very own personal assistant! Discordy is an interactive discord bot that is designed to provide additional functionalities ot your servers
+Welcome to very own personal assistant! Diskycordy is an interactive discord bot that is designed to provide additional functionalities ot your servers
 
 ## 🌟 Key Features:
 
 - **Moderation Tools:** Keep your server safe and friendly with message deletion, ban, and timeout functionality.
-- **Roles:** Custom member roles for each.
+- **Roles:** Custom member roles for each member to choose from.
 - **Levelling System:** Foster server loyalty and engagement by implementing a dynamic levelling system that rewards active participation and contribution, providing members with a sense of achievement and recognition.
 - **Utility Commands:** Access helpful utilities for quick information retrieval such as getting each member's time in UTC for those late-night sessions with global friends.
 
