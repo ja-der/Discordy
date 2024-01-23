@@ -1,4 +1,4 @@
-# Discorder 🤖
+# Discordy 🤖
 
 Welcome to very own personal assistant! Discordy is an interactive discord bot that is designed to provide additional functionalities ot your servers
 
@@ -13,7 +13,11 @@ Welcome to very own personal assistant! Discordy is an interactive discord bot t
 
 ### Message Deletion
 
-<img style="center" src="./screenshot_previews/delete1.png" width="300px"/> <img style="center" src="screenshot_previews/delete2.png" width="300px"/> <img style="center" src="screenshot_previews/delete3.png" alt="Homepage" width="300px"/>
+<img style="center" src="screenshot_previews/delete1.png" width="500px"/> <img style="center" src="screenshot_previews/delete2.png" width="500px"/> <img style="center" src="screenshot_previews/delete3.png" alt="Homepage" width="500px"/>
+
+### Role Assignment
+
+<img style="center" src="screenshot_previews/roles.png" width="500px"/>
 
 ## How to Use?
 
