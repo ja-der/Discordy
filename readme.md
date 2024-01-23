@@ -13,7 +13,7 @@ Welcome to very own personal assistant! Discordy is an interactive discord bot t
 
 ### Message Deletion
 
-<img style="center" src="screenshot_previews/delete1.png" width="450px"/> <img style="center" src="screenshot_previews/delete2.png" width="450px"/> <img style="center" src="screenshot_previews/delete3.png" alt="Homepage" width="450"/>
+<img style="center" src="screenshot_previews/delete1.png"/> <img style="center" src="screenshot_previews/delete2.png"/> <img style="center" src="screenshot_previews/delete3.png" alt="Homepage"/>
 
 ### Role Assignment
 
