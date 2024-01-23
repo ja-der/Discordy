@@ -6,21 +6,23 @@ Welcome to very own personal assistant! Discordy is an interactive discord bot t
 
 - **Moderation Tools:** Keep your server safe and friendly with message deletion, ban, and timeout functionality.
 - **Roles:** Custom member roles for each.
-- **Customization Options:** Tailor [Bot Name] to fit your server's unique preferences and needs.
-- **Utility Commands:** Access helpful utilities for quick information retrieval.
+- **Levelling System:** Foster server loyalty and engagement by implementing a dynamic levelling system that rewards active participation and contribution, providing members with a sense of achievement and recognition.
+- **Utility Commands:** Access helpful utilities for quick information retrieval such as getting each member's time in UTC for those late-night sessions with global friends.
 
 ## Feature Gallery: Main Features
 
 ### Message Deletion
 
-<img style="center" src="screenshot_previews/delete1.png" width="500px"/> <img style="center" src="screenshot_previews/delete2.png" width="500px"/> <img style="center" src="screenshot_previews/delete3.png" alt="Homepage" width="500px"/>
+<img style="center" src="screenshot_previews/delete1.png" width="450px"/> <img style="center" src="screenshot_previews/delete2.png" width="450px"/> <img style="center" src="screenshot_previews/delete3.png" alt="Homepage" width="450"/>
 
 ### Role Assignment
 
-<img style="center" src="screenshot_previews/roles.png" width="500px"/>
+<img style="center" src="screenshot_previews/roles.png"/>
 
 ## How to Use?
 
-install node.js
-use discord.js
-install ms, pretty-ms in npm
+- clone repo
+- install node.js
+- discord.js
+- install ms, pretty-ms in npm
+- run with nodemon
