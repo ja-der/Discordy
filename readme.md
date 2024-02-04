@@ -22,7 +22,7 @@ Welcome to very own personal assistant! Diskycordy is an interactive discord bot
 
 ### OpenAI Chatbot
 
-The API request to OpenAI's ChatGPT is functional, but it's crucial to be aware of account limitations, such as rate restrictions, which may temporarily block requests to the server. To unlock the full potential of this functionality, a premium plan is recommended. Unfortunately, due to financial constraints, I'm unable to subscribe to a premium plan at the moment. However, it's worth noting that the implementation of AI in the server is already in place and operational, promising an enhanced experience when premium features become available in the future.
+The API request to OpenAI's ChatGPT is functional, but is not working at the moment due to account limitations. The requesets from diskycordy through my openAI account are rate limited, which blocks requests to the server. The only solution is switching to a premium plan. Unfortunately, due to financial constraints, I'm unable to subscribe to a premium plan at the moment. However, it's worth noting that the implementation of AI in the server is already in place and operational, promising an enhanced experience for your server.
 
 <img style="center" src="screenshot_previews/rate limit.png"/>
 ## How to Use?
