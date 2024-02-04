@@ -1,6 +1,7 @@
 const { Client, Message } = require('discord.js');
 const Level = require('./Level');
 const calculateLevelXp = require('./calculateLevelXP');
+const level = require('./Level');
 
 function getRandomXP(min, max) {
     min = Math.ceil(min);
@@ -35,7 +36,17 @@ module.exports = async (client, message) => {
                 console.log(`Error saving updated level ${e}`);
                 return;
             })
+        }  else {
+            const newLevel = new Level({
+                userID: message.author.id,
+                guildID: message.guild.id,
+                xp: xpToGive,
+            });
+
+            await newLevel.save();
+
         }
+
     } catch (error) {
         console.log(`Error giving xp: ${error}`)
     }
